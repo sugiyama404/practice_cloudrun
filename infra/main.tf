@@ -21,12 +21,6 @@ module "iam" {
   compute_engine_default_service_account = var.compute_engine_default_service_account
 }
 
-#Network
-# module "network" {
-#   source = "./modules/network"
-#   region = var.region
-# }
-
 # artifactregistry
 module "artifactregistry" {
   source                                 = "./modules/artifactregistry"
