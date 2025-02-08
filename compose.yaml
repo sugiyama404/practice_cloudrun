@@ -1,0 +1,11 @@
+services:
+  web:
+    restart: always
+    build: ./webserver
+    container_name: "nginx-web"
+    volumes:
+      - ./webserver/src:/usr/share/nginx/html
+      - ./webserver/nginx.conf:/etc/nginx/nginx.conf
+    tty: true
+    ports:
+      - 8080:8080
